@@ -3,8 +3,8 @@ export default function guardrail(mathFunction) {
   try {
     newArray.push(mathFunction());
   }
-  catch (erro) {
-    newArray.push(erro.toString());
+  catch (err) {
+    newArray.push(err.toString());
   }
   finally {
     newArray.push('Guardrail was processed');
