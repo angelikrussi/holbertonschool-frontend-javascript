@@ -47,13 +47,3 @@ console.log(createEmployee('Federico', 'Rico', 200));
 console.log(createEmployee('John', 'Doe', 1000));
 console.log(createEmployee('Betty', 'Zuck', '$500'));
 
-function isDirector(employee: Director | Teacher): employee is Director {
-  return (employee instanceof Director) ? true : false;
-}
-
-function executeWork(employee: Director | Teacher): string {
-  return isDirector(employee) ? employee.workDirectorTasks() : employee.workTeacherTasks();
-}
-
-console.log(executeWork(createEmployee('Federico', 'Rico', 200)));
-console.log(executeWork(createEmployee('John', 'Doe', 1000)));
